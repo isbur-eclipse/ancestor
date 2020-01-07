@@ -1,0 +1,40 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: ancestor
+  namespace: workspace-creator
+spec:
+  output:
+    to:
+      kind: DockerImage
+      name: 'docker.io/isbur/ancestor:latest'
+    pushSecret:
+      name: dockerhub.pushsecret
+  resources:
+    limits:
+      cpu: '4'
+      memory: 2Gi
+  successfulBuildsHistoryLimit: 5
+  failedBuildsHistoryLimit: 5
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: DockerImage
+        name: 'quay.io/eclipse/che-cpp-rhel7:nightly'
+      env:
+        - name: BUILD_LOGLEVEL
+          value: '5'
+  postCommit: {}
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/isbur/gentoo-prefix.git'
+      ref: master
+  triggers:
+    - type: ConfigChange
+    - type: GitHub
+      github:
+        secretReference:
+          name: github.react-native-workspace.secret
+  runPolicy: Serial
