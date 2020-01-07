@@ -1,3 +1,3 @@
-wget https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh
-chmod +x bootstrap-prefix.sh 
-printf 'Y\n3\n/projects/gentoo\nluck\n' | ./bootstrap-prefix.sh > log.txt
+wget -P /projects https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh
+chmod +x /projects/bootstrap-prefix.sh 
+printf 'Y\n3\n/projects/gentoo\nluck\n' | /projects/bootstrap-prefix.sh > log.txt
