@@ -14,8 +14,8 @@ ls -la
 echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
 wget $BOOTSTRAP_DOWNLOAD_URL
 mkdir gentoo
-chmod +x /bootstrap-prefix.sh 
-printf 'Y\n2\n$HOME/gentoo\nluck\n' | /opt/bootstrap-prefix.sh > log.txt
+chmod +x ./bootstrap-prefix.sh 
+printf 'Y\n2\n$HOME/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh > log.txt
 
 
 echo 'ls -la'
