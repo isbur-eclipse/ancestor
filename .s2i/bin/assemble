@@ -6,6 +6,9 @@ export BACKUP_DIR=/tmp/scripts
 echo 'echo $BACKUP_DIR'
 echo $BACKUP_DIR
 
+echo 'ls -la'
+ls -la
+
 echo 'cd .. && ls -la'
 cd ..
 ls -la
@@ -14,20 +17,20 @@ echo 'cd / && ls -la'
 cd /
 ls -la
 
-echo 'find -perm /700'
-find -perm /700
+#echo 'find -perm /700'
+#find -perm /700
 
 
 export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh"
 
-wget $BOOTSTRAP_DOWNLOAD_URL
+#wget $BOOTSTRAP_DOWNLOAD_URL
 
-ls -l /projects
-echo 'chmod u=rwx /projects'
-chmod u=rwx /projects
-ls -l /projects
+#ls -l ./projects
+#echo 'chmod u=rwx /projects'
+#chmod u=rwx ./projects
+#ls -l ./projects
 
-wget -P /projects $BOOTSTRAP_DOWNLOAD_URL
+wget -P ./projects $BOOTSTRAP_DOWNLOAD_URL
 chmod +x /projects/bootstrap-prefix.sh 
 printf 'Y\n2\n/projects/gentoo\nluck\n' | /projects/bootstrap-prefix.sh > log.txt
 
