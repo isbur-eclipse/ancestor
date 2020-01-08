@@ -3,10 +3,17 @@ export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/pl
 echo 'pwd'
 pwd
 
+echo 'cd /opt && pwd && ls -la'
+cd /opt 
+pwd
+ls -la
 
+
+echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
 wget $BOOTSTRAP_DOWNLOAD_URL
-chmod +x /projects/bootstrap-prefix.sh 
-printf 'Y\n2\n/projects/gentoo\nluck\n' | /projects/bootstrap-prefix.sh > log.txt
+mkdir gentoo
+chmod +x /opt/bootstrap-prefix.sh 
+printf 'Y\n2\n/opt/gentoo\nluck\n' | /opt/bootstrap-prefix.sh > log.txt
 
 
 echo 'ls -la'
