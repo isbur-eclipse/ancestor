@@ -1,10 +1,12 @@
+echo 'find -uid 10001'
+find -uid 10001
+
+
 export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh"
 
-echo 'pwd'
-pwd
 
-echo 'cd /opt && pwd && ls -la'
-cd /opt 
+echo 'cd $HOME && pwd && ls -la'
+cd $HOME
 pwd
 ls -la
 
@@ -12,11 +14,17 @@ ls -la
 echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
 wget $BOOTSTRAP_DOWNLOAD_URL
 mkdir gentoo
-chmod +x /opt/bootstrap-prefix.sh 
-printf 'Y\n2\n/opt/gentoo\nluck\n' | /opt/bootstrap-prefix.sh > log.txt
+chmod +x /bootstrap-prefix.sh 
+printf 'Y\n2\n$HOME/gentoo\nluck\n' | /opt/bootstrap-prefix.sh > log.txt
 
 
 echo 'ls -la'
+ls -la
+
+echo '$HOME:'
+cd $HOME
+pwd
+cd ..
 ls -la
 
 #echo 'cd .. && ls -la'
