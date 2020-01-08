@@ -9,13 +9,13 @@ echo $BACKUP_DIR
 echo 'ls -la'
 ls -la
 
-echo 'cd .. && ls -la'
-cd ..
-ls -la
-
-echo 'cd / && ls -la'
-cd /
-ls -la
+#echo 'cd .. && ls -la'
+#cd ..
+#ls -la
+#
+#echo 'cd / && ls -la'
+#cd /
+#ls -la
 
 #echo 'find -perm /700'
 #find -perm /700
