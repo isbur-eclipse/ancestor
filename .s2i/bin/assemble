@@ -1,12 +1,21 @@
-echo 'BACKUP_DIR=.'
-export BACKUP_DIR=.
-echo 'echo \$BACKUP_DIR'
+echo 'Who am I?'
+whoami
+
+echo 'BACKUP_DIR=/tmp/scripts'
+export BACKUP_DIR=/tmp/scripts
+echo 'echo $BACKUP_DIR'
 echo $BACKUP_DIR
 
-ls -l .
-echo 'chmod u=rwx .'
-chmod u=rwx .
-ls -l .
+echo 'cd .. && ls -la'
+cd ..
+ls -la
+
+echo 'cd / && ls -la'
+cd /
+ls -la
+
+echo 'find -perm /700'
+find -perm /700
 
 
 export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh"
