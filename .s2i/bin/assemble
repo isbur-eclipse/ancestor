@@ -1,3 +1,25 @@
-wget -P /projects https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh
+echo 'BACKUP_DIR=.'
+export BACKUP_DIR=.
+echo 'echo \$BACKUP_DIR'
+echo $BACKUP_DIR
+
+ls -l .
+echo 'chmod u=rwx .'
+chmod u=rwx .
+ls -l .
+
+
+export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh"
+
+wget $BOOTSTRAP_DOWNLOAD_URL
+
+ls -l /projects
+echo 'chmod u=rwx /projects'
+chmod u=rwx /projects
+ls -l /projects
+
+wget -P /projects $BOOTSTRAP_DOWNLOAD_URL
 chmod +x /projects/bootstrap-prefix.sh 
-printf 'Y\n3\n/projects/gentoo\nluck\n' | /projects/bootstrap-prefix.sh > log.txt
+printf 'Y\n2\n/projects/gentoo\nluck\n' | /projects/bootstrap-prefix.sh > log.txt
+
+cd $BACKUP_DIR
