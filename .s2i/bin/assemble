@@ -6,6 +6,8 @@ export BACKUP_DIR=/tmp/scripts
 echo 'echo $BACKUP_DIR'
 echo $BACKUP_DIR
 
+echo 'pwd'
+pwd
 echo 'ls -la'
 ls -la
 
