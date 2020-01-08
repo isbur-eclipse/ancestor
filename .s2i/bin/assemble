@@ -1,13 +1,14 @@
-echo 'Who am I?'
-whoami
-
-echo 'BACKUP_DIR=/tmp/scripts'
-export BACKUP_DIR=/tmp/scripts
-echo 'echo $BACKUP_DIR'
-echo $BACKUP_DIR
+export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh"
 
 echo 'pwd'
 pwd
+
+
+wget $BOOTSTRAP_DOWNLOAD_URL
+chmod +x /projects/bootstrap-prefix.sh 
+printf 'Y\n2\n/projects/gentoo\nluck\n' | /projects/bootstrap-prefix.sh > log.txt
+
+
 echo 'ls -la'
 ls -la
 
@@ -23,7 +24,7 @@ ls -la
 #find -perm /700
 
 
-export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh"
+
 
 #wget $BOOTSTRAP_DOWNLOAD_URL
 
@@ -31,9 +32,3 @@ export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/pl
 #echo 'chmod u=rwx /projects'
 #chmod u=rwx ./projects
 #ls -l ./projects
-
-wget -P ./projects $BOOTSTRAP_DOWNLOAD_URL
-chmod +x /projects/bootstrap-prefix.sh 
-printf 'Y\n2\n/projects/gentoo\nluck\n' | /projects/bootstrap-prefix.sh > log.txt
-
-cd $BACKUP_DIR
