@@ -11,6 +11,9 @@ cd $HOME
 pwd
 ls -la
 
+export USER=user
+export USERNAME=user
+export LOGNAME=user
 
 echo 'echo $USER'
 echo $USER
