@@ -1,28 +1,19 @@
-echo 'cat /etc/passwd'
-cat /etc/passwd
-echo 'id'
-id
+export MY_ROOT=/home/user/gentoo
+export MY_DISTDIR="$MY_ROOT/tmp/user/cache"
+mkdir -p $MY_DISTDIR
+cd $MY_DISTDIR
+wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
+
 
 export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh"
 
-
-echo 'cd $HOME && pwd && ls -la'
-cd $HOME
-pwd
-ls -la
 
 export USER=user
 export USERNAME=user
 export LOGNAME=user
 
-echo 'echo $USER'
-echo $USER
-echo 'echo $USERNAME'
-echo $USERNAME
-echo 'echo $LOGNAME'
-echo $LOGNAME
 
-
+cd $HOME
 echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
 wget $BOOTSTRAP_DOWNLOAD_URL
 mkdir gentoo
