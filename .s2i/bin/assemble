@@ -1,6 +1,7 @@
-echo 'find -uid 10001'
-find -uid 10001
-
+echo 'cat /etc/passwd'
+cat /etc/passwd
+echo 'id'
+id
 
 export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh"
 
@@ -11,11 +12,19 @@ pwd
 ls -la
 
 
-echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
-wget $BOOTSTRAP_DOWNLOAD_URL
-mkdir gentoo
-chmod +x ./bootstrap-prefix.sh 
-printf 'Y\n2\n$HOME/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh > log.txt
+echo 'echo $USER'
+echo $USER
+echo 'echo $USERNAME'
+echo $USERNAME
+echo 'echo $LOGNAME'
+echo $LOGNAME
+
+
+#echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
+#wget $BOOTSTRAP_DOWNLOAD_URL
+#mkdir gentoo
+#chmod +x ./bootstrap-prefix.sh 
+#printf 'Y\n2\n/home/user/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh
 
 
 echo 'ls -la'
@@ -26,24 +35,3 @@ cd $HOME
 pwd
 cd ..
 ls -la
-
-#echo 'cd .. && ls -la'
-#cd ..
-#ls -la
-#
-#echo 'cd / && ls -la'
-#cd /
-#ls -la
-
-#echo 'find -perm /700'
-#find -perm /700
-
-
-
-
-#wget $BOOTSTRAP_DOWNLOAD_URL
-
-#ls -l ./projects
-#echo 'chmod u=rwx /projects'
-#chmod u=rwx ./projects
-#ls -l ./projects
