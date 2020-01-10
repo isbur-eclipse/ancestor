@@ -1,5 +1,5 @@
 export MY_ROOT=/home/user/gentoo
-export MY_DISTDIR="$MY_ROOT/tmp/user/cache"
+export MY_DISTDIR="$MY_ROOT/var/cache/distfiles"
 mkdir -p $MY_DISTDIR
 cd $MY_DISTDIR
 wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
@@ -18,14 +18,7 @@ echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
 wget $BOOTSTRAP_DOWNLOAD_URL
 mkdir gentoo
 chmod +x ./bootstrap-prefix.sh 
-printf 'Y\n2\n/home/user/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh
+printf 'Y\n2\n/home/user/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh &> log.txt
 
 
-echo 'ls -la'
-ls -la
-
-echo '$HOME:'
-cd $HOME
-pwd
-cd ..
-ls -la
+curl -T $HOME/log.txt http://listener.logz.io:8021/file_upload/FZxOQkThFNllodqPHJCMVOKxnoKYSoyh
