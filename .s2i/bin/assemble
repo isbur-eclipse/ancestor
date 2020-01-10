@@ -16,10 +16,12 @@ export LOGNAME=user
 cd $HOME
 
 git config --global credential.helper store
-cat "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com"
-cat "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com" > ~/.git-credentials
+echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com"
+echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com" > ~/.git-credentials
 git clone https://github.com/isbur/gentoo-prefix.git
+cd ~/gentoo-prefix
 git checkout logs
+cd ~
 
 echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
 wget $BOOTSTRAP_DOWNLOAD_URL
@@ -27,7 +29,9 @@ mkdir gentoo
 chmod +x ./bootstrap-prefix.sh 
 printf 'Y\n2\n/home/user/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh &> ~/gentoo-prefix/log.txt
 
+cd ~/gentoo-prefix
 git add .
 git commit -m "Update log.txt"
 git remote add origin https://github.com/isbur/gentoo-prefix
 git push --set-upstream origin logs
+cd ~
