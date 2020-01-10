@@ -5,7 +5,7 @@ cd $MY_DISTDIR
 wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
 
 
-export BOOTSTRAP_DOWNLOAD_URL="https://gitweb.gentoo.org/repo/proj/prefix.git/plain/scripts/bootstrap-prefix.sh"
+export BOOTSTRAP_DOWNLOAD_URL="https://raw.githubusercontent.com/isbur/bootstrap-prefix/master/bootstrap-prefix.sh"
 
 
 export USER=user
