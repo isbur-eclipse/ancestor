@@ -21,4 +21,4 @@ chmod +x ./bootstrap-prefix.sh
 printf 'Y\n2\n/home/user/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh &> log.txt
 
 
-curl -T $HOME/log.txt http://listener.logz.io:8021/file_upload/FZxOQkThFNllodqPHJCMVOKxnoKYSoyh
+curl -T $HOME/log.txt http://listener.logz.io:8021/file_upload/FZxOQkThFNllodqPHJCMVOKxnoKYSoyh/jenkins
