@@ -1,3 +1,6 @@
+####
+# Prepare offline Python installation
+####
 export MY_ROOT=/home/user/gentoo
 export MY_DISTDIR="$MY_ROOT/var/cache/distfiles"
 mkdir -p $MY_DISTDIR
@@ -5,9 +8,16 @@ cd $MY_DISTDIR
 wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
 
 
+####
+# Download bootstrap-prefix script
+####
 export BOOTSTRAP_DOWNLOAD_URL="https://raw.githubusercontent.com/isbur/bootstrap-prefix/master/bootstrap-prefix.sh"
 
 
+####
+# Trying to provide fake username  to the script
+# (username is empty by default inside docker container)
+####
 export USER=user
 export USERNAME=user
 export LOGNAME=user
@@ -15,23 +25,33 @@ export LOGNAME=user
 
 cd $HOME
 
+
+####
+# Configuring git
+####
+## Setting credentials
 git config --global credential.helper store
 echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com"
 echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com" > ~/.git-credentials
+echo 'cat ~/.git-credentials'
+cat ~/.git-credentials
+
+## Checking cloning ability
 git clone https://github.com/isbur/gentoo-prefix.git
 cd ~/gentoo-prefix
 git checkout logs
 cd ~
 
-echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
-wget $BOOTSTRAP_DOWNLOAD_URL
-mkdir gentoo
-chmod +x ./bootstrap-prefix.sh 
-printf 'Y\n2\n/home/user/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh &> ~/gentoo-prefix/log.txt
+#echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
+#wget $BOOTSTRAP_DOWNLOAD_URL
+#mkdir gentoo
+#chmod +x ./bootstrap-prefix.sh 
+#printf 'Y\n2\n/home/user/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh &> ~/gentoo-prefix/log.txt
 
+## Trying to push
 cd ~/gentoo-prefix
 git add .
-git commit -m "Update log.txt"
+git -m "Update log.txt"
 git remote add origin https://github.com/isbur/gentoo-prefix
 git push --set-upstream origin logs
 cd ~
