@@ -29,6 +29,8 @@ cd $HOME
 ####
 # Configuring git
 ####
+git config --global user.email "isburenkov@gmail.com"
+git config --global user.name "Igor Burenkov"
 ## Setting credentials
 git config --global credential.helper store
 echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com"
