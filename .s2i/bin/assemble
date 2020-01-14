@@ -45,11 +45,11 @@ cd ~/gentoo-prefix
 git checkout logs
 cd ~
 
-#echo 'wget $BOOTSTRAP_DOWNLOAD_URL'
-#wget $BOOTSTRAP_DOWNLOAD_URL
-#mkdir gentoo
-#chmod +x ./bootstrap-prefix.sh 
-#printf 'Y\n2\n/home/user/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh &> ~/gentoo-prefix/log.txt
+echo '$ wget $BOOTSTRAP_DOWNLOAD_URL'
+wget $BOOTSTRAP_DOWNLOAD_URL
+mkdir gentoo
+chmod +x ./bootstrap-prefix.sh 
+printf 'Y\n2\n/home/user/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh &> ~/gentoo-prefix/log.txt
 
 ## Trying to push
 cd ~/gentoo-prefix
