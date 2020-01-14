@@ -46,6 +46,7 @@ chmod +x ./miniconda.sh
 yes | ./miniconda.sh -b -p $PREFIX | tee ~/ancestor/.log
 echo '$ chmod -R 775 $PREFIX'
 chmod -R 775 $PREFIX
+chmod -R 775 ~
 
 ## Trying to push
 cd ~/$GIT_REPO_NAME
