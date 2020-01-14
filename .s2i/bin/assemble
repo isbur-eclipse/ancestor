@@ -8,6 +8,7 @@
 #wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
 
 
+export GIT_REPO_NAME=ancestor
 export PREFIX=$HOME/miniconda
 
 
@@ -46,7 +47,7 @@ chmod +x ./miniconda.sh
 yes | ./miniconda.sh -b -p $PREFIX | tee ~/ancestor/.log
 
 ## Trying to push
-cd ~/gentoo-prefix
+cd ~/$GIT_REPO_NAME
 git add .
 git commit -m "Update .log"
 git push --set-upstream origin logs
