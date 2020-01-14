@@ -8,19 +8,13 @@
 #wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
 
 
+export PREFIX=$HOME/miniconda
+
+
 ####
 # Download bootstrap-conda script
 ####
 export BOOTSTRAP_DOWNLOAD_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
-
-
-####
-# Trying to provide fake username  to the script
-# (username is empty by default inside docker container)
-####
-#export USER=user
-#export USERNAME=user
-#export LOGNAME=user
 
 
 cd $HOME
@@ -46,14 +40,14 @@ git checkout logs
 cd ~
 
 echo '$ wget $BOOTSTRAP_DOWNLOAD_URL'
-wget $BOOTSTRAP_DOWNLOAD_URL
+wget $BOOTSTRAP_DOWNLOAD_URL -O miniconda.sh
 #mkdir gentoo
-chmod +x ./bootstrap-prefix.sh 
-#printf 'Y\n2\n/home/user/gentoo\nluck\n' | $HOME/bootstrap-prefix.sh &> ~/gentoo-prefix/log.txt
+chmod +x ./miniconda.sh 
+yes | ./miniconda.sh -b -p $PREFIX | tee ~/ancestor/.log
 
 ## Trying to push
 cd ~/gentoo-prefix
 git add .
-git commit -m "Update log.txt"
+git commit -m "Update .log"
 git push --set-upstream origin logs
 cd ~
