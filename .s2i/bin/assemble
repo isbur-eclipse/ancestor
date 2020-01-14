@@ -33,9 +33,10 @@ git config --global user.email "isburenkov@gmail.com"
 git config --global user.name "Igor Burenkov"
 ## Setting credentials
 git config --global credential.helper store
+echo "# Git credentials:"
 echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com"
 echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com" > ~/.git-credentials
-echo 'cat ~/.git-credentials'
+echo '$ cat ~/.git-credentials'
 cat ~/.git-credentials
 
 ## Checking cloning ability
@@ -53,7 +54,6 @@ cd ~
 ## Trying to push
 cd ~/gentoo-prefix
 git add .
-git -m "Update log.txt"
-git remote add origin https://github.com/isbur/gentoo-prefix
+git commit -m "Update log.txt"
 git push --set-upstream origin logs
 cd ~
