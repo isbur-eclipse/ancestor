@@ -41,10 +41,11 @@ git checkout logs
 cd ~
 
 echo '$ wget $BOOTSTRAP_DOWNLOAD_URL'
-wget $BOOTSTRAP_DOWNLOAD_URL -O miniconda.sh
-#mkdir gentoo
+wget $BOOTSTRAP_DOWNLOAD_URL -O miniconda.sh --no-verbose
 chmod +x ./miniconda.sh 
 yes | ./miniconda.sh -b -p $PREFIX | tee ~/ancestor/.log
+echo '$ chmod -R 775 $PREFIX'
+chmod -R 775 $PREFIX
 
 ## Trying to push
 cd ~/$GIT_REPO_NAME
