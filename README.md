@@ -1,7 +1,7 @@
 # ancestor
 За основу взят образ:
 
-quay.io/eclipse/che-cpp-rhel7:nightly
+https://quay.io/eclipse/che-cpp-rhel7
 
 
 See here:
