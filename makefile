@@ -4,6 +4,10 @@ git:
 	git push
 
 
+history:
+	history | cut -c 8- > proto_assemble
+
+
 kitchen-init:
 	echo "We are going to check whether everything in your Openshift Online account is set up to be used in this Galushkas Pot workflow"
 	# не в этой жизни...
