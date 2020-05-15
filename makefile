@@ -5,7 +5,8 @@ git:
 
 
 history:
-	./history.sh
+	cp ~/.bash_history proto_assemble
 
 
 buildConfig:
+	python ./buildConfig/generate_buildConfig.py

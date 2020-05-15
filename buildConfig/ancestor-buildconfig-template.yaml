@@ -1,0 +1,41 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: {{galushka_name}}
+  namespace: {{openshift_workspace_name}}
+spec:
+  output:
+    to:
+      kind: DockerImage
+      {%set path_components = [output_docker_repo_url, galushka_name+":latest"]%}
+      name: {{path_components|path_join}}
+    pushSecret:
+      name: dockerhub.pushsecret
+  resources:
+    limits:
+      cpu: {{number_of_CPU_cores|default('4')}}
+      memory: {{memory_allowed|default('2Gi')}}
+  successfulBuildsHistoryLimit: 5
+  failedBuildsHistoryLimit: 5
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: DockerImage
+        name: 'quay.io/eclipse/che-cpp-rhel7:nightly'
+      env:
+        - name: BUILD_LOGLEVEL
+          value: '5'
+  postCommit: {}
+  source:
+    type: Git
+    git:
+      uri: {{source_git_repo_url}}
+      ref: master
+  triggers:
+    - type: ConfigChange
+    - type: GitHub
+      github:
+        secretReference:
+          name: github.secret
+  runPolicy: Serial
