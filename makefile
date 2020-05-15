@@ -13,8 +13,8 @@ buildConfig:
 
 
 preparations:
-	# yes | conda create --prefix ./envs -c conda-forge jinja2 PyYAML
-	yes | conda create --prefix ./envs
+	yes | conda create --prefix ./envs -c conda-forge jinja2 PyYAML
+	# yes | conda create --prefix ./envs
 	echo "env_prompt: '(ancestor) '" > ./envs/.condarc
 	# conda env config vars set CONDARC=/projects/ancestor/envs/.condarc -p ./envs
 	# conda env config vars unset CONDARC=/projects/ancestor/envs/.condarc -p ./envs
