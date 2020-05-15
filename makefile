@@ -10,3 +10,8 @@ history:
 
 buildConfig:
 	python ./buildConfig/generate_buildConfig.py
+
+
+preparations:
+	yes | conda create --prefix ./envs -c conda-forge jinja2 PyYAML
+	conda env config --set env_prompt '(ancestor)' -p ./envs

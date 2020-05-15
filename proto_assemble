@@ -1,27 +1,3 @@
-ls
-cd ancestor/
-make history
-history
-history | cut -c 8-
-history | cut -c 8- > test
-make history
-make history
-chmod 775 ./history.sh 
-make history
-make history
-./history.sh
-make history
-source
-source ./history.sh
-make history
-pip
-pip3
-pip --version
-pip install asciinemu
-pip install asciinema
-rec
-ls
-ls -a
 conda
 conda create --name ancestor
 conda create --name ancestor --prefix ./envs
