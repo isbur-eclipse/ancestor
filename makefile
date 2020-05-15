@@ -5,7 +5,7 @@ git:
 
 
 history:
-	history | cut -c 8- > proto_assemble
+	. ./history.sh
 
 
 kitchen-init:

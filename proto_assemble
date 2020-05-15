@@ -1,0 +1,673 @@
+ls
+cd ancestor/
+make history
+history
+history | cut -c 8-
+history | cut -c 8- > test
+make history
+make history
+chmod 775 ./history.sh 
+make history
+make history
+./history.sh
+make history
+source
+source ./history.sh
+make history
+pip
+pip3
+pip --version
+pip install asciinemu
+pip install asciinema
+rec
+ls
+ls -a
+conda
+conda create --name ancestor
+conda create --name ancestor --prefix ./envs
+conda create --name ancestor asciinema
+conda create --name ancestor -c conda-forge asciinema
+conda activate ancestor
+rec
+conda deactivate
+conda create --prefix ./envs -c conda-forge asciinema
+conda activate /projects/ancestor/envs
+cd envs
+ls
+ls -a
+cd ..
+ls
+conda config --set env_prompt '({name})'
+conda config --set env_prompt 'test'
+cd envs/
+ls
+ls -a
+cd ..
+ls -a
+conda deactivate
+conda activate .envs
+conda activate ./envs
+conda config --set env_prompt '(ancestor)'
+conda deactivate
+conda activate ./envs
+rec
+conda env config vars list
+conda env config vars list
+conda env
+conda ancestor
+conda env config
+conda update conda
+deactivate
+conda deactivate
+conda deactivate
+conda update conda
+activate ./envs
+conda activate ./envs
+conda env config vars list
+conda env config vars set PATH=./envs/bin
+conda reactivate
+conda deactivate
+conda activate ./envs
+rec
+conda env config vars list
+conda deactivate
+conda deactivate
+conda env config vars unset PATH
+conda env config vars list
+conda deactivate
+exit
+ls
+conda activate ./envs
+exit
+conda deactivate
+ls
+cd ancestor/
+conda activate ./envs
+conda env config vars list
+$PATH
+rec
+asciinema
+asciinema rec
+locale
+asciinema rec proto_assemble
+export LC_ALL=${LANG}
+asciinema rec proto_assemble
+$LANG
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+make history
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+cd /projects
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+make history
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+cd /projects
+cd ancestor/
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+make history
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+cd /projects
+make history
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+make history
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+cd /projects
+cd ancestor/
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+make history
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+cd /projects
+make history
+make history
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+make history
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+cd /projects
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+make history
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+cd /projects
+cd ancestor/
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+make history
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+ls -a
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+export PROMPT_COMMAND="history -a; history -n"
+test
+cd ~
+export PROMPT_COMMAND="history -a; history -n"
+export LC_ALL=en_US.UTF-8
+asciinema rec proto_assemble
+export PROMPT_COMMAND="history -a; history -n"
+test
+ls
+vi .bash_history
+cd /projects
+make history
+make history
+history
+history
+test
+history
+export HISTCONTROL=erasedups
+history
+make history
+history
+history
+export HISTCONTROL=ignoredups:erasedups
+history

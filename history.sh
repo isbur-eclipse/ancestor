@@ -1,0 +1,1 @@
+cp ~/.bash_history proto_assemble
