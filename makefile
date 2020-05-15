@@ -9,13 +9,28 @@ kitchen-init:
 	# не в этой жизни...
 
 
-pot-init:
+pot-init: ./assemble
 	echo "Enter new workspace name (with no spaces):" ; \
 	read WORKSPACE_NAME
 	# export it?
+	add $WORKSPACE_NAME to .gitignore
+	mkdir $WORKSPACE_NAME
+	cd $WORKSPACE_NAME
+	
+	git init
+	git set remote origin
+	make git m="Initial commit"
+	
+	mkdir .s2i
+	cd .s2i
+	mkdir bin
+	cd ..
+	cp ../.s2i/bin/run ./.s2i/bin/run
+	
+
 
 pot-add:
 	# Get list of commands of present bash session
-	history | cut -c 8-
+	history | cut -c 8- > ./$WORKSPACE_NAME/.s2i/bin/assemble
 
 pot-cook:
