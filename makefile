@@ -1,3 +1,6 @@
+.PHONY: buildConfig
+
+
 git:
 	git add .
 	git commit -m "$m"
@@ -9,7 +12,7 @@ history:
 
 
 buildConfig:
-	python ./buildConfig/generate_buildConfig.py
+	python ./buildConfig/generate_buildConfig.py > buildConfig.yaml
 
 
 preparations:
