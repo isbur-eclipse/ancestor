@@ -12,8 +12,8 @@ spec:
       name: dockerhub.pushsecret
   resources:
     limits:
-      cpu: '4'
-      memory: 2Gi
+      cpu: '2'
+      memory: 1Gi
   successfulBuildsHistoryLimit: 5
   failedBuildsHistoryLimit: 5
   strategy:
