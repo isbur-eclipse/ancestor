@@ -14,7 +14,7 @@ buildConfig:
 
 preparations:
 	yes | conda create --prefix ./envs -c conda-forge jinja2 PyYAML
-	conda env config vars set CONDA_ENV_PROMPT='(ancestor) ' -p ./envs
+	conda env config vars set CONDA_PROMPT_MODIFIER='(ancestor) ' -p ./envs
 	# conda config --set env_prompt '"(ancestor) "' --file ./envs/.condarc
 	# echo "env_prompt: '(ancestor) '" > ./envs/.condarc
 	# conda env config vars set env_prompt='(ancestor) ' -p ./envs
