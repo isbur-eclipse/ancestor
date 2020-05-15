@@ -12,7 +12,7 @@ history:
 
 
 buildConfig:
-	python ./buildConfig/generate_buildConfig.py > buildConfig.yaml
+	python /projects/ancestor/buildConfig/generate_buildConfig.py > buildConfig.yaml
 
 
 preparations:

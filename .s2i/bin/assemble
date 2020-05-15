@@ -1,28 +1,20 @@
 ####
-# Prepare offline Python installation
+# Setting environment variables...
 ####
-#export MY_ROOT=/home/user/gentoo
-#export MY_DISTDIR="$MY_ROOT/var/cache/distfiles"
-#mkdir -p $MY_DISTDIR
-#cd $MY_DISTDIR
-#wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
-
-
 export GIT_REPO_NAME=ancestor
 export PREFIX=$HOME/miniconda
-
-
-####
-# Download bootstrap-conda script
-####
 export BOOTSTRAP_DOWNLOAD_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
+
+
 
 
 cd $HOME
 
 
+
+
 ####
-# Configuring git
+# Configuring git...
 ####
 git config --global user.email "isburenkov@gmail.com"
 git config --global user.name "Igor Burenkov"
@@ -33,6 +25,8 @@ echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com"
 echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com" > ~/.git-credentials
 echo '$ cat ~/.git-credentials'
 cat ~/.git-credentials
+chmod 775 ~/.git-credentials
+
 
 ## Checking cloning ability
 git clone https://github.com/isbur/ancestor.git
@@ -40,14 +34,33 @@ cd ~/ancestor
 git checkout logs
 cd ~
 
+
+
+
+####
+# Bootstraping miniconda...
+####
 echo '$ wget $BOOTSTRAP_DOWNLOAD_URL'
 wget $BOOTSTRAP_DOWNLOAD_URL -O miniconda.sh --no-verbose
 chmod +x ./miniconda.sh 
 yes | ./miniconda.sh -b -p $PREFIX | tee ~/ancestor/.log
 echo '$ chmod -R 775 $PREFIX'
 chmod -R 775 $PREFIX
-chmod -R 775 ~
 
+
+
+
+####
+# Setting up (ancestor) environment...
+####
+yes | conda create --name ancestor -c conda-forge jinja2 PyYAML
+conda activate ancestor
+
+
+
+####
+# At the end...
+####
 ## Trying to push
 cd ~/$GIT_REPO_NAME
 git add .
