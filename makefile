@@ -13,6 +13,8 @@ pot-init: ./assemble
 	echo "Enter new workspace name (with no spaces):" ; \
 	read WORKSPACE_NAME
 	# export it?
+	
+	echo "Creating new git repo..."
 	add $WORKSPACE_NAME to .gitignore
 	mkdir $WORKSPACE_NAME
 	cd $WORKSPACE_NAME
@@ -26,6 +28,10 @@ pot-init: ./assemble
 	mkdir bin
 	cd ..
 	cp ../.s2i/bin/run ./.s2i/bin/run
+	make git m="Second commit"
+	
+	echo "Initiating Openshift Online session..."
+	oc login
 	
 
 
@@ -34,3 +40,4 @@ pot-add:
 	history | cut -c 8- > ./$WORKSPACE_NAME/.s2i/bin/assemble
 
 pot-cook:
+	oc build
