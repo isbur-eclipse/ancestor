@@ -29,12 +29,12 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://github.com/isbur/gentoo-prefix.git'
+      uri: 'https://github.com/isbur-eclipse/ancestor.git'
       ref: master
   triggers:
     - type: ConfigChange
     - type: GitHub
       github:
         secretReference:
-          name: github.react-native-workspace.secret
+          name: github.secret
   runPolicy: Serial
