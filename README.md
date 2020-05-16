@@ -3,6 +3,16 @@
 
 https://quay.io/eclipse/che-cpp-rhel7
 
+который, в свою очередь, основан на
+
+registry.access.redhat.com/devtools/llvm-toolset-rhel7
+
+(ключевой момент - RHEL, простым смертным его не достать, но можно почитать описание:
+
+https://access.redhat.com/documentation/en-us/red_hat_developer_tools/2018.2/html-single/using_clang_and_llvm_toolset/index
+
+)
+
 1. Файлы из этого репозитория, расположенные в папке .s2i/bin, используются для модификации этого образа на сервере Openshift Online Start
 
 2. В соответствии с документацией s2i, сначала запускается скрипт assemble - этакий dockerfile, но от лица non-root пользователя

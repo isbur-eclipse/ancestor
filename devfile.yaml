@@ -1,0 +1,20 @@
+metadata:
+  name: ancestor
+projects:
+  - name: ancestor
+    source:
+      location: 'https://github.com/isbur-eclipse/ancestor'
+      type: git
+      branch: conda_fresh
+attributes:
+  persistVolumes: 'false'
+components:
+  - mountSources: true
+    endpoints:
+      - name: nodejs
+        port: 3000
+    memoryLimit: 512Mi
+    type: dockerimage
+    image: 'isbur/ancestor:conda_fresh'
+    alias: nodejs
+apiVersion: 1.0.0
