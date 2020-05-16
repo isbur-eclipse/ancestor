@@ -12,7 +12,8 @@ history:
 
 
 login:
-	echo "$$OPENSHIFT_SERVER_URL" | oc login
+	echo "export OPENSHIFT_SERVER_URL=https://api.us-east-1.starter.openshift-online.com:6443" >> ~/.bashrc
+	oc login --token=$$OPENSHIFT_LOGIN_TOKEN --server=$$OPENSHIFT_SERVER_URL
 
 
 buildConfig:
