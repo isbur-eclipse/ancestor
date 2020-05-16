@@ -1,2 +1,4 @@
 test
 envs
+*.tar.gz
+oc

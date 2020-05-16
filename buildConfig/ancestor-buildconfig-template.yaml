@@ -7,14 +7,14 @@ spec:
   output:
     to:
       kind: DockerImage
-      {%set path_components = [output_docker_repo_url, galushka_name+":latest"]%}
+      {%set path_components = [output_docker_repo_url, galushka_name + ":" + docker_tagname]%}
       name: {{path_components|path_join}}
     pushSecret:
       name: dockerhub.pushsecret
   resources:
     limits:
-      cpu: {{number_of_CPU_cores|default('4')}}
-      memory: {{memory_allowed|default('2Gi')}}
+      cpu: {{number_of_CPU_cores|default('2')}}
+      memory: {{memory_allowed|default('1Gi')}}
   successfulBuildsHistoryLimit: 5
   failedBuildsHistoryLimit: 5
   strategy:
@@ -22,7 +22,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: 'quay.io/eclipse/che-cpp-rhel7:nightly'
+        name: {{base_dockerimage}}
       env:
         - name: BUILD_LOGLEVEL
           value: '5'

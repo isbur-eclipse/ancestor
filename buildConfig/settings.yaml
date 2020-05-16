@@ -1,4 +1,6 @@
-galushka_name: vk-chatbot-builder
+galushka_name: ancestor
 openshift_workspace_name: workspace-creator
 output_docker_repo_url: 'docker.io/isbur'
-source_git_repo_url: 'https://github.com/isbur/ancestor.git'
+docker_tagname: 'oconda'
+base_dockerimage: 'docker.io/isbur:conda_fresh'
+source_git_repo_url: 'https://github.com/isbur-eclipse/ancestor.git'
