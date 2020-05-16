@@ -7,6 +7,10 @@ git:
 	git push
 
 
+galushka:
+	oc create -f buildConfig.yaml
+
+
 history:
 	cp ~/.bash_history proto_assemble
 
