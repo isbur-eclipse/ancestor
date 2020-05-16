@@ -26,6 +26,7 @@ echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com" > ~/.git-credent
 echo '$ cat ~/.git-credentials'
 cat ~/.git-credentials
 chmod 775 ~/.git-credentials
+ls -la
 
 
 ## Checking cloning ability
