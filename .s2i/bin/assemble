@@ -51,14 +51,6 @@ chmod -R 775 $PREFIX
 
 
 ####
-# Setting up (ancestor) environment...
-####
-yes | conda create --name ancestor -c conda-forge jinja2 PyYAML
-conda activate ancestor
-
-
-
-####
 # At the end...
 ####
 ## Trying to push
