@@ -1,0 +1,7 @@
+galushka_name: ancestor
+openshift_workspace_name: workspace-creator
+output_docker_repo_url: 'docker.io/isbur'
+docker_tagname: 'oconda'
+base_dockerimage: 'docker.io/isbur:conda_fresh'
+source_git_repo_url: 'https://github.com/isbur-eclipse/ancestor.git'
+OPENSHIFT_SERVER_URL: 'https://api.us-east-1.starter.openshift-online.com:6443'

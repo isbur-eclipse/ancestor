@@ -1,0 +1,4 @@
+echo "Enter secrets repo url:"
+read SECRETS_REPO_URL
+git clone $SECRETS_REPO_URL ../credentials_repo
+source ../credentials_repo/env.sh
