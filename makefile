@@ -2,13 +2,17 @@
 
 
 git:
-	git add .
+	git add --all .
 	git commit -m "$m"
 	git push
 
 
 galushka:
 	oc create -f buildConfig.yaml
+
+
+subgalushka:
+	./make/subgalushka.sh
 
 
 history:
