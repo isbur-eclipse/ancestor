@@ -17,7 +17,8 @@ dependencies:
   - python-docx
   - jinja2
   - openshift-cli
-  - nodejs" > $HOME/environment.yaml
+  - nodejs
+  - conda" > $HOME/environment.yaml
 yes | conda env create -f $HOME/environment.yaml
 if [ $? != 0 ]; then
   exit 1
@@ -27,8 +28,8 @@ rm $HOME/environment.yaml
 
 
 
-source $HOME/miniconda/envs/ancestor/bin/activate
-yes | conda init
+#source $HOME/miniconda/envs/ancestor/bin/activate
+#yes | conda init
 
 
 
