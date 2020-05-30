@@ -10,7 +10,15 @@ source ~/miniconda/bin/activate
 yes | conda init
 source ~/.bashrc
 conda config --append channels conda-forge
-yes | conda env create --name ancestor "python pypandoc python-docx jinja2 openshift-cli"
+cat "name: ancestor
+depenedencies:
+  - python
+  - pypandoc
+  - python-docx
+  - jinja2
+  - openshift-cli" > environment.yaml
+yes | conda env create -f environment.yaml
+rm environment.yaml
 
 
 
