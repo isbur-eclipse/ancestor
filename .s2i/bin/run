@@ -1,4 +1,2 @@
-source ~/miniconda/bin/activate
-yes | conda init
-source ~/.bashrc
+conda activate ancestor
 tail -f /dev/null
