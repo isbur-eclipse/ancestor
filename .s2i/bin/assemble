@@ -1,11 +1,3 @@
-####
-# Setting environment variables...
-####
-export PREFIX=$HOME/miniconda
-
-
-
-
 source $HOME/miniconda/bin/activate
 yes | conda init
 source $HOME/.bashrc
@@ -17,19 +9,14 @@ dependencies:
   - python-docx
   - jinja2
   - openshift-cli
-  - nodejs
-  - conda" > $HOME/environment.yaml
+  - nodejs" > $HOME/environment.yaml
 yes | conda env create -f $HOME/environment.yaml
 if [ $? != 0 ]; then
   exit 1
 fi
 rm $HOME/environment.yaml
-
-
-
-
-#source $HOME/miniconda/envs/ancestor/bin/activate
-#yes | conda init
+conda clean -a -y
+echo "conda activate ancestor" >> ~/.bashrc
 
 
 
