@@ -16,5 +16,5 @@ components:
     memoryLimit: 512Mi
     type: dockerimage
     image: 'isbur/ancestor:oconda'
-    alias: nodejs
+    alias: ancestor
 apiVersion: 1.0.0
