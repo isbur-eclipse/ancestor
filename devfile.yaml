@@ -1,17 +1,17 @@
 metadata:
-  name: ancestor-oconda
+  name: ancestor-on-the-way-to-mothercare
 projects:
   - name: ancestor
     source:
       location: 'https://github.com/isbur-eclipse/ancestor'
       type: git
-      branch: oconda
+      branch: mothercare
 attributes:
   persistVolumes: 'false'
 components:
   - mountSources: true
     endpoints:
-      - name: nodejs
+      - name: ancestor
         port: 3000
     memoryLimit: 512Mi
     type: dockerimage
