@@ -16,9 +16,9 @@ dependencies:
   - pypandoc
   - python-docx
   - jinja2
-  - openshift-cli" > $HOME/environment.yaml
+  - openshift-cli
+  - nodejs" > $HOME/environment.yaml
 yes | conda env create -f $HOME/environment.yaml
-echo $?
 if [ $? != 0 ]; then
   exit 1
 fi
@@ -26,9 +26,3 @@ rm $HOME/environment.yaml
 
 
 
-
-cd $HOME
-mkdir bin
-cd bin
-git clone https://github.com/SierraSoftworks/bash-cli
-printf "export PATH=$PATH:$HOME/bin" >> $HOME/.bashrc
