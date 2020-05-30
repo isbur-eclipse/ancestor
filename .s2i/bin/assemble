@@ -1,7 +1,6 @@
 ####
 # Setting environment variables...
 ####
-export GIT_REPO_NAME=ancestor
 export PREFIX=$HOME/miniconda
 export BOOTSTRAP_DOWNLOAD_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 
@@ -16,24 +15,7 @@ cd $HOME
 ####
 # Configuring git...
 ####
-git config --global user.email "isburenkov@gmail.com"
-git config --global user.name "Igor Burenkov"
-## Setting credentials
-git config --global credential.helper store
-echo "# Git credentials:"
-echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com"
-echo "https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com" > ~/.git-credentials
-echo '$ cat ~/.git-credentials'
-cat ~/.git-credentials
-chmod 775 ~/.git-credentials
-ls -la
-
-
-## Checking cloning ability
-git clone https://github.com/isbur/ancestor.git
-cd ~/ancestor
-git checkout logs
-cd ~
+git config --global credential.helper "cache --timeout 30000"
 
 
 
@@ -44,19 +26,9 @@ cd ~
 echo '$ wget $BOOTSTRAP_DOWNLOAD_URL'
 wget $BOOTSTRAP_DOWNLOAD_URL -O miniconda.sh --no-verbose
 chmod +x ./miniconda.sh 
-yes | ./miniconda.sh -b -p $PREFIX | tee ~/ancestor/.log
+yes | ./miniconda.sh -b -p $PREFIX
 echo '$ chmod -R 775 $PREFIX'
 chmod -R 775 $PREFIX
 
 
 
-
-####
-# At the end...
-####
-## Trying to push
-cd ~/$GIT_REPO_NAME
-git add .
-git commit -m "Update .log"
-git push --set-upstream origin logs
-cd ~
