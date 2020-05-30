@@ -6,6 +6,7 @@ export PREFIX=$HOME/miniconda
 
 
 
+source $HOME/.bashrc
 conda config --append channels conda-forge
 yes | conda env create --name ancestor python pypandoc python-docx jinja2 openshift-cli
 
