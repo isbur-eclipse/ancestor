@@ -1,5 +1,5 @@
 metadata:
-  name: ancestor
+  name: ancestor-oconda
 projects:
   - name: ancestor
     source:
