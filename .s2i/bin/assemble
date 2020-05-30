@@ -11,7 +11,7 @@ yes | conda init
 source ~/.bashrc
 conda config --append channels conda-forge
 printf "name: ancestor
-depenedencies:
+dependencies:
   - python
   - pypandoc
   - python-docx
