@@ -16,9 +16,9 @@ depenedencies:
   - pypandoc
   - python-docx
   - jinja2
-  - openshift-cli" > environment.yaml
-yes | conda env create -f environment.yaml
-rm environment.yaml
+  - openshift-cli" > $HOME/environment.yaml
+yes | conda env create -f $HOME/environment.yaml
+rm $HOME/environment.yaml
 
 
 
