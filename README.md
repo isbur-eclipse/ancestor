@@ -2,11 +2,17 @@
 
 ## Dependencies
 git
+
 conda
+
 python
+
 pypandoc
+
 python-docx
+
 openshift-cli
+
 djinja2 (?)
 
 ## Assembly
