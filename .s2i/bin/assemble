@@ -2,33 +2,12 @@
 # Setting environment variables...
 ####
 export PREFIX=$HOME/miniconda
-export BOOTSTRAP_DOWNLOAD_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 
 
 
 
-cd $HOME
-
-
-
-
-####
-# Configuring git...
-####
-git config --global credential.helper "cache --timeout 30000"
-
-
-
-
-####
-# Bootstraping miniconda...
-####
-echo '$ wget $BOOTSTRAP_DOWNLOAD_URL'
-wget $BOOTSTRAP_DOWNLOAD_URL -O miniconda.sh --no-verbose
-chmod +x ./miniconda.sh 
-yes | ./miniconda.sh -b -p $PREFIX
-echo '$ chmod -R 775 $PREFIX'
-chmod -R 775 $PREFIX
+conda config --append channels conda-forge
+yes | conda env create --name ancestor python pypandoc python-docx jinja2 openshift-cli
 
 
 
