@@ -5,7 +5,7 @@ projects:
     source:
       location: 'https://github.com/isbur-eclipse/ancestor'
       type: git
-      branch: conda_fresh
+      branch: oconda
 attributes:
   persistVolumes: 'false'
 components:
@@ -15,6 +15,6 @@ components:
         port: 3000
     memoryLimit: 512Mi
     type: dockerimage
-    image: 'isbur/ancestor:conda_fresh'
+    image: 'isbur/ancestor:oconda'
     alias: nodejs
 apiVersion: 1.0.0
