@@ -26,3 +26,9 @@ rm $HOME/environment.yaml
 
 
 
+
+source $HOME/miniconda/envs/ancestor/bin/activate
+yes | conda init
+
+
+
