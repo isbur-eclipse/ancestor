@@ -1,4 +1,16 @@
 # ancestor
+
+## Dependencies
+git
+conda
+python
+pypandoc
+python-docx
+openshift-cli
+djinja2 (?)
+
+## Assembly
+
 0. За основу взят образ:
 
 https://quay.io/eclipse/che-cpp-rhel7
