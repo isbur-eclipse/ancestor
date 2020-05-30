@@ -1,13 +1,13 @@
 kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
-  name: ancestor
+  name: ancestor-oconda
   namespace: workspace-creator
 spec:
   output:
     to:
       kind: DockerImage
-      name: 'docker.io/isbur/ancestor:latest'
+      name: 'docker.io/isbur/ancestor:oconda'
     pushSecret:
       name: dockerhub.pushsecret
   resources:
@@ -21,7 +21,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: 'quay.io/eclipse/che-cpp-rhel7:nightly'
+        name: 'docker.io/isbur/ancestor:conda_fresh'
       env:
         - name: BUILD_LOGLEVEL
           value: '5'
@@ -30,7 +30,7 @@ spec:
     type: Git
     git:
       uri: 'https://github.com/isbur-eclipse/ancestor.git'
-      ref: master
+      ref: oconda
   triggers:
     - type: ConfigChange
     - type: GitHub
