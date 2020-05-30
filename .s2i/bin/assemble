@@ -29,6 +29,7 @@ chmod +x ./miniconda.sh
 yes | ./miniconda.sh -b -p $PREFIX
 echo '$ chmod -R 775 $PREFIX'
 chmod -R 775 $PREFIX
+rm miniconda.sh
 
 
 
