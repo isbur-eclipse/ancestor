@@ -25,4 +25,5 @@ conda clean -a -y
 echo "conda activate ancestor" >> ~/.bashrc
 
 
+chmod -R 775 /tmp/src
 
