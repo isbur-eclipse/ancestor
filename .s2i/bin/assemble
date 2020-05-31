@@ -20,6 +20,11 @@ fi
 rm $HOME/environment.yaml
 conda clean -a -y
 echo "conda activate ancestor" >> ~/.bashrc
+
+
+npm install -g oclif
+
+
 chmod -R 775 $PREFIX
 
 
