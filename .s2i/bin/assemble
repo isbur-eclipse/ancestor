@@ -14,7 +14,7 @@ dependencies:
   - pypandoc
   - python-docx
   - jinja2
-  - openshift-clils
+  - openshift-cli
   - nodejs" > $HOME/environment.yaml
 yes | conda env create -f $HOME/environment.yaml
 if [ $? != 0 ]; then
