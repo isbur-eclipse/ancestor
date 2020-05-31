@@ -27,7 +27,7 @@ npm install -g oclif
 
 
 chmod -R 775 $PREFIX
-chmod -r 775 /tmp/src
+chmod -R 775 /tmp/src
 
 
 
