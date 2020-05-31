@@ -23,7 +23,7 @@ spec:
         kind: DockerImage
         name: 'docker.io/isbur/ancestor:conda_fresh'
   postCommit:
-    command: ["/bin/bash", "-c", "/tmp/scripts/test/run"]
+    command: ["/bin/bash", "-c", "/tmp/src/test/run"]
   source:
     type: Git
     git:
