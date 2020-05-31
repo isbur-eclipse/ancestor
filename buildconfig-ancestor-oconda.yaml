@@ -22,10 +22,8 @@ spec:
       from:
         kind: DockerImage
         name: 'docker.io/isbur/ancestor:conda_fresh'
-      env:
-        - name: BUILD_LOGLEVEL
-          value: '5'
-  postCommit: {}
+  postCommit:
+    command: ["/bin/bash", "-c", "/tmp/scripts/test/run"]
   source:
     type: Git
     git:
@@ -36,5 +34,5 @@ spec:
     - type: GitHub
       github:
         secretReference:
-          name: github.secret
+          name: github.webhook.secret
   runPolicy: Serial
