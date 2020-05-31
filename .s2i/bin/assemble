@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 export PREFIX=$HOME/miniconda
 
 
@@ -25,6 +28,7 @@ echo "conda activate ancestor" >> ~/.bashrc
 conda activate ancestor
 conda info
 npm install -g oclif
+oclif
 
 
 chmod -R 775 $PREFIX /tmp/src ~/.npm
