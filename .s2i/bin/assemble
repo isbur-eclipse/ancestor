@@ -27,8 +27,7 @@ conda info
 npm install -g oclif
 
 
-chmod -R 775 $PREFIX
-chmod -R 775 /tmp/src
+chmod -R 775 $PREFIX /tmp/src ~/.npm
 
 
 
