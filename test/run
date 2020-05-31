@@ -5,5 +5,6 @@ printf "#############################
 I'm working and I'm testing!
 #############################
 "
+source ~/miniconda/bin/activate ~/.bashrc
 conda info
 oclif
