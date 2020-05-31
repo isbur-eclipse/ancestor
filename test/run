@@ -8,4 +8,4 @@ I'm working and I'm testing!
 source ~/miniconda/bin/activate
 source ~/.bashrc
 conda info
-oclif
+oclif || true
