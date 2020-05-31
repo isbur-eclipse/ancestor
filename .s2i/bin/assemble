@@ -27,6 +27,7 @@ echo "conda activate ancestor" >> ~/.bashrc
 
 conda activate ancestor
 conda info
+npm config ls -l
 npm install -g oclif
 oclif
 
