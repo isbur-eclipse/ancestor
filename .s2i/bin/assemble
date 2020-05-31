@@ -22,11 +22,12 @@ conda clean -a -y
 echo "conda activate ancestor" >> ~/.bashrc
 
 
+conda activate ancestor
 npm install -g oclif
 
 
 chmod -R 775 $PREFIX
-chmod -r +x /tmp/src
+chmod -r 775 /tmp/src
 
 
 
