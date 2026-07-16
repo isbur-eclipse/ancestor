@@ -28,6 +28,8 @@ spec:
           value: '5'
         - name: OPENSHIFT_SERVER_URL
           value: {{OPENSHIFT_SERVER_URL}}
+        # Historical lab anti-pattern (2020): build-time login token in env.
+        # Exhibit only — do not copy for real systems.
         - name: OPENSHIFT_LOGIN_TOKEN
           value: {{OPENSHIFT_LOGIN_TOKEN}}
   postCommit: {}

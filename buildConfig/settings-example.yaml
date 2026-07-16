@@ -1,3 +1,5 @@
+# Example settings for the Jinja BuildConfig generator (2020 lab).
+# Do not put real tokens here — see root README "Historical caveats".
 galushka_name: ancestor
 openshift_workspace_name: workspace-creator
 output_docker_repo_url: 'docker.io/isbur'
