@@ -1,88 +1,88 @@
 # ancestor
 
-[Русская версия](README.ru.md)
+[English version](README.en.md)
 
-> **Museum exhibit (2020)** — a personal lab for building custom [Eclipse Che](https://www.eclipse.org/che/) workspace images on [OpenShift Online Starter](https://www.openshift.com/) via [Source-to-Image (S2I)](https://github.com/openshift/source-to-image).
+> **Музейный экспонат (2020)** — личная лаборатория по сборке кастомных образов workspace для [Eclipse Che](https://www.eclipse.org/che/) на [OpenShift Online Starter](https://www.openshift.com/) через [Source-to-Image (S2I)](https://github.com/openshift/source-to-image).
 >
-> Resume one-liner: *S2I-based Che workspace image with Miniconda; successfully packed Python and Node.js into one image (limited success — IDE language tooling was left unfinished).*
+> Одна строка для резюме: *Образ Che-workspace на S2I с Miniconda; удалось упаковать Python и Node.js в один образ (ограниченный успех — языковой tooling IDE так и не довёл).*
 
-This repository is kept as a **curated historical artifact**, not as runnable modern infrastructure. OpenShift Online Starter and that Che generation are gone; the value here is the experiment and what it taught.
+Репозиторий хранится как **кураторский исторический артефакт**, а не как рабочая современная инфраструктура. OpenShift Online Starter и то поколение Che уже в прошлом; ценность здесь — в эксперименте и в том, чему он научил.
 
 ---
 
-## What this was
+## Что это было
 
-Around May 2020 I needed a Che workspace that was more than a stock editor container: a place where I could own the toolchain. OpenShift’s model pushed builds through S2I (essentially a Dockerfile run as a non-root user). The base was a RHEL-flavored Che image that ordinary users couldn’t easily rebuild from scratch:
+Около мая 2020 мне нужен был Che-workspace сильнее стокового редактора-контейнера: место, где toolchain принадлежит мне. Модель OpenShift гнала сборки через S2I (по сути Dockerfile от имени non-root). База — Che-образ на RHEL, который обычный пользователь с нуля почти не пересоберёт:
 
-- Base: [`quay.io/eclipse/che-cpp-rhel7`](https://quay.io/eclipse/che-cpp-rhel7)  
-  (itself on Red Hat’s LLVM toolset image)
-- Output: [`docker.io/isbur/ancestor`](https://hub.docker.com/repository/docker/isbur/ancestor)
+- База: [`quay.io/eclipse/che-cpp-rhel7`](https://quay.io/eclipse/che-cpp-rhel7)  
+  (сама на образе Red Hat LLVM toolset)
+- Результат: [`docker.io/isbur/ancestor`](https://hub.docker.com/repository/docker/isbur/ancestor)
 
-The idea: start from that Che ancestor, run S2I `assemble` to install **Miniconda**, declare a conda env, push the result to Docker Hub, then open it again from a Che `devfile`.
+Идея: взять этот Che-ancestor, через S2I `assemble` поставить **Miniconda**, описать conda-окружение, запушить в Docker Hub и снова открыть из Che `devfile`.
 
-## Outcome
+## Итог
 
-| Result | Notes |
-|--------|--------|
-| **Succeeded (limited)** | One image carried **both Python and Node.js** (via conda; see branches `oconda` / `npm`). Related follow-on work lived in other repos. |
-| **Not finished** | Che/Theia **language tooling** (Python extensions / sidecar plugin containers) was never wired up. Runtimes were in the image; IDE intelligence was not. |
-| **Platform died** | OpenShift Online Starter and that Che stack are historical. This exhibit is not meant to be revived as-is. |
+| Результат | Комментарий |
+|-----------|-------------|
+| **Удалось (ограниченно)** | В одном образе оказались **и Python, и Node.js** (через conda; ветки `oconda` / `npm`). Продолжение жило в других репозиториях. |
+| **Не доделано** | Языковой **tooling** Che/Theia (расширения Python / sidecar-контейнеры плагинов) так и не подключил. Рантаймы в образе были; «ум» IDE — нет. |
+| **Платформа умерла** | OpenShift Online Starter и тот стек Che — история. Этот экспонат не рассчитан на реанимацию as-is. |
 
-## Visitor map
+## Карта для посетителя
 
 ```text
-  Che base image (RHEL / che-cpp-rhel7)
+  Базовый образ Che (RHEL / che-cpp-rhel7)
             │
             ▼
   S2I assemble  (.s2i/bin/assemble)
-    · activate / configure Miniconda
-    · conda env "ancestor" (python, later + nodejs, …)
+    · активация / настройка Miniconda
+    · conda env "ancestor" (python, позже + nodejs, …)
             │
             ▼
   S2I run       (.s2i/bin/run)
-    · activate env, keep container alive
+    · активация env, контейнер остаётся живым
             │
             ▼
-  OpenShift BuildConfig  →  push to Docker Hub
+  OpenShift BuildConfig  →  push в Docker Hub
             │
             ▼
-  Che workspace via devfile.yaml  (image: isbur/ancestor:…)
+  Che workspace через devfile.yaml  (image: isbur/ancestor:…)
 ```
 
-**Main exhibits (this branch):**
+**Основные экспонаты (эта ветка):**
 
-| Path | Role |
+| Путь | Роль |
 |------|------|
-| [`.s2i/bin/assemble`](.s2i/bin/assemble) / [`run`](.s2i/bin/run) | Image build & entry (S2I) |
-| [`buildConfig/`](buildConfig/) | Jinja2 generator for OpenShift `BuildConfig` |
-| [`makefile`](makefile) | Personal automation (`galushka`, settings, login helpers) |
-| [`devfile.yaml`](devfile.yaml) | Che workspace pointing at the built image |
-| [`archive/`](archive/) | Unfinished drafts & bash-history scratch (not part of the “success” story) |
+| [`.s2i/bin/assemble`](.s2i/bin/assemble) / [`run`](.s2i/bin/run) | Сборка и вход в образ (S2I) |
+| [`buildConfig/`](buildConfig/) | Генератор OpenShift `BuildConfig` на Jinja2 |
+| [`makefile`](makefile) | Личная автоматизация (`galushka`, settings, login) |
+| [`devfile.yaml`](devfile.yaml) | Che workspace на собранном образе |
+| [`archive/`](archive/) | Недоделки и bash-history (не часть истории успеха) |
 
-**Related branches (lineage of the dual-runtime win):**
+**Смежные ветки (линия dual-runtime):**
 
-- `oconda` / `npm` — conda env with `python` **and** `nodejs` (and npm/oclif experiments)
-- `zz_python`, `conda_fresh`, `zz_gentoo-prefix`, `zz_logs` — side experiments
+- `oconda` / `npm` — conda env с `python` **и** `nodejs` (плюс эксперименты npm/oclif)
+- `zz_python`, `conda_fresh`, `zz_gentoo-prefix`, `zz_logs` — боковые опыты
 
-Naming like `galushka`, `mothercare`, `mommy` is intentional period flavor, left as-is.
+Имена вроде `galushka`, `mothercare`, `mommy` — вкус эпохи, оставлены как есть.
 
-## What I was practicing
+## Чему я здесь учился
 
-- Non-root, platform-constrained image builds (S2I on OpenShift)
-- Turning a cloud IDE base image into a personal toolchain layer (conda)
-- BuildConfig → registry → workspace loop
-- Stretching one workspace image toward multiple runtimes — and learning where **image contents** stop and **IDE tooling sidecars** begin
+- Сборке образов non-root в жёстких рамках платформы (S2I на OpenShift)
+- Превращению базового образа cloud IDE в свой слой toolchain (conda)
+- Циклу BuildConfig → registry → workspace
+- Растягиванию одного workspace-образа на несколько рантаймов — и границе, где кончается **содержимое образа** и начинаются **sidecar’ы IDE-tooling**
 
-## Historical caveats (on purpose)
+## Исторические оговорки (намеренно)
 
-- **Do not treat as production.** Secrets and tokens in templates/env wiring reflect 2020 lab habits (e.g. login token passed into build env). Wrong for anything real; left visible as a lesson, not a recipe.
-- `assemble` on *this* branch is a thinner snapshot than the `oconda`/`npm` line where Node landed.
-- Incomplete factory ideas (`mommy`, `pot-init`, …) live under [`archive/`](archive/).
+- **Не считать продакшеном.** Секреты и токены в шаблонах/env — привычки лаборатории 2020 (например, login-токен в build env). Для реальных систем так нельзя; оставлено как урок, не как рецепт.
+- `assemble` на *этой* ветке тоньше, чем линия `oconda`/`npm`, где появился Node.
+- Незавершённые идеи фабрики (`mommy`, `pot-init`, …) лежат в [`archive/`](archive/).
 
-## Dependencies (of the era)
+## Зависимости (той эпохи)
 
 git · conda · python · pypandoc · python-docx · openshift-cli · jinja2 · (Py)YAML
 
 ---
 
-*Exhibit only. Not maintained for current OpenShift, Dev Spaces, or Kubernetes.*
+*Только экспонат. Не поддерживается под актуальный OpenShift, Dev Spaces или Kubernetes.*

@@ -1,14 +1,14 @@
-# Archive — unfinished wings of the exhibit
+# Архив — недоделанные крылья экспозиции
 
-[Русская версия](README.ru.md)
+[English version](README.en.md)
 
-Material that belonged to the lab bench but not to the successful “one image, two runtimes” path. Kept for honesty and texture, not as instructions.
+Материал с лабораторного стола, но не из успешной линии «один образ — два рантайма». Оставлен ради честности и фактуры, не как инструкция.
 
-| Item | What it was |
-|------|-------------|
-| `proto_assemble` | Dump of interactive bash history while figuring out conda/S2I |
-| `mommy/` | Sketch of a registry/factory for child images — incomplete (even syntactically) |
-| `pot-init.sh` | Attempt to bootstrap a new workspace git repo + S2I skeleton — unfinished |
-| `onStartup` | Placeholder Che startup hook (`Show instructions!`) |
+| Файл | Что это было |
+|------|--------------|
+| `proto_assemble` | Дамп интерактивной bash-истории, пока разбирался с conda/S2I |
+| `mommy/` | Набросок registry/фабрики дочерних образов — незавершён (даже синтаксически) |
+| `pot-init.sh` | Попытка поднять новый git-репозиторий workspace + скелет S2I — не доведена |
+| `onStartup` | Заглушка Che startup (`Show instructions!`) |
 
-See the root [README](../README.md) / [README.ru.md](../README.ru.md) for the curated visitor path.
+Кураторский маршрут — в корневом [README.md](../README.md) / [README.en.md](../README.en.md).
